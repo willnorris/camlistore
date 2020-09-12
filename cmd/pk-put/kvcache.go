@@ -346,7 +346,7 @@ func fileInfoToFingerprint(fi os.FileInfo) statFingerprint {
 		if clean := cleanSysStat; clean != nil {
 			// TODO: don't clean bad fields, but provide a
 			// portable way to extract all good fields.
-			// This is a Linux+Mac-specific hack for now.
+			// This is a Linux+Mac+Windows-specific hack for now.
 			sys = clean(sys)
 		}
 		c32 := crc32.NewIEEE()
